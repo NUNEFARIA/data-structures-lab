@@ -1,4 +1,4 @@
-package dinamicStructures.linkedList;
+package linkedList;
 
 /**
  * Representa um nó de uma lista encadeada.

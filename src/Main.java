@@ -1,18 +1,21 @@
-import staticStrutures.queue.Fila;
+import tree.BinaryTree;
+import tree.Node;
 
 public class Main {
     public static void main(String[] args) throws Exception {
         
-        Fila<String> fila = new Fila<>(10);
+        BinaryTree<Integer> tree = new BinaryTree<>();
         
-        fila.adiciona("Gustavo");
-        System.out.println(fila);
-        fila.adiciona("Mateus");
-        System.out.println(fila);
-        fila.adiciona("Maria");
-        System.out.println(fila);
-        fila.retira();
-        System.out.println(fila);
+        System.out.println(tree);
+        tree.insert(new Node<>(1));
+        System.out.println(tree);
+        tree.insert(new Node<>(0));
+        System.out.println(tree);
+        tree.insert(new Node<>(4));
+        System.out.println(tree);
+        tree.insert(new Node<>(2));
+        System.out.println(tree);
+        
         
         
     }

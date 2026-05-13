@@ -1,4 +1,4 @@
-package staticStrutures.stack;
+package stack.arrayStack;
 
 import java.util.Arrays;
 

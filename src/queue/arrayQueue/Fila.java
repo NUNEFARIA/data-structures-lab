@@ -1,4 +1,4 @@
-package staticStrutures.queue;
+package queue.arrayQueue;
 
 import java.util.Arrays;
 

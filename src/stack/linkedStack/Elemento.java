@@ -1,4 +1,4 @@
-package dinamicStructures.linkedStack;
+package stack.linkedStack;
 
 public class Elemento<T> {
     private T elemento;

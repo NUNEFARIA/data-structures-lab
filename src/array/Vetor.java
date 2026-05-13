@@ -1,4 +1,4 @@
-package staticStrutures.array;
+package array;
 
 import java.util.Arrays;
 

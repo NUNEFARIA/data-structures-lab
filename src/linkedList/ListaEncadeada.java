@@ -1,4 +1,4 @@
-package dinamicStructures.linkedList;
+package linkedList;
 
 public class ListaEncadeada<T> {
     
