@@ -45,7 +45,9 @@ public class Entry<K, V> {
         
         builder.append("[K:" + key);
         builder.append("|V:" + value);
-        builder.append("] " + next);
+        if (this.next != null) {
+            builder.append("] " + next);
+        }
         
         return builder.toString();
     }

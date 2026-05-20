@@ -61,8 +61,10 @@ public class HashMap<K, V> {
         StringBuilder builder = new StringBuilder();
         
         for (Bucket bucket: buckets) {
-            builder.append("\n");
-            builder.append(bucket);
+            if (bucket != null) {
+                builder.append("\n");
+                builder.append(bucket);
+            }
         }
         
         return builder.toString();
