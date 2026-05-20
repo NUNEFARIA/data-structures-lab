@@ -14,7 +14,7 @@ public class Bucket<K, V> {
         
         Entry<K,V> newEntry = new Entry<>(key,value);
         
-        if (this.firstEntry.equals(null)) {
+        if (this.firstEntry == null) {
             this.firstEntry = newEntry;
             return;
         }
