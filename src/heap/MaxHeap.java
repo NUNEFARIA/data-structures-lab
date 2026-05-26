@@ -24,52 +24,38 @@ public class MaxHeap<T extends Comparable<T>> {
         this.maxHeap = maxHeap;
     }
     
-    private int left(int index) { return (2 * index + 1);}
+    private void heapifyUp(int size) {
     
-    private int right(int index) { return (2 * index + 2);}
     
-    private int parent(int index) { return ((index - 1) / 2);}
-        
-        
-        public void insert (T value){
-            
-            for (int i = 0; i < capacity; ) {
-                
-                if (this.maxHeap[i] == null) {
-                    this.maxHeap[i] = value;
-                    return;
-                }
-                
-                if (value.compareTo(this.maxHeap[i]) == 1) {
-                    
-                    i = this.right(i);
-                    
-                }
-                else {
-                    
-                    i = this.left(i);
-                }
-                
-                System.out.println("Capacidade Insuficiente!!");
-            }
-        }
-        
-        @Override
-        public String toString () {
-            
-            StringBuilder builder = new StringBuilder();
-            
-            for (int i = 0; i < this.capacity; i++) {
-                
-                if (this.maxHeap[i] != null){
-                    builder.append("[");
-                    builder.append(this.maxHeap[i]);
-                    builder.append("] ");
-                }
-                
-            }
-            
-            return builder.toString();
-        }
-        
     }
+    
+    public void insert (T value) {
+        
+        if (size == capacity) {
+            throw new RuntimeException("Heap is full");
+        }
+        
+        this.maxHeap[this.size] = value;
+        
+        heapifyUp(this.size);
+        
+        this.size++;
+    }
+    
+    @Override
+    public String toString () {
+            
+        StringBuilder builder = new StringBuilder();
+            
+        for (int i = 0; i < this.capacity; i++) {
+                
+            if (this.maxHeap[i] != null){
+                builder.append("[");
+                builder.append(this.maxHeap[i]);
+                builder.append("] ");
+            }
+        }
+        return builder.toString();
+    }
+        
+}
