@@ -24,19 +24,52 @@ public class MaxHeap<T extends Comparable<T>> {
         this.maxHeap = maxHeap;
     }
     
-    @Override
-    public String toString() {
+    private int left(int index) { return (2 * index + 1);}
+    
+    private int right(int index) { return (2 * index + 2);}
+    
+    private int parent(int index) { return ((index - 1) / 2);}
         
-        StringBuilder builder = new StringBuilder();
         
-        for (int i = 0; i < size; i++) {
+        public void insert (T value){
             
-            builder.append("[");
-            builder.append(maxHeap[i]);
-            builder.append("] ");
-            
+            for (int i = 0; i < capacity; ) {
+                
+                if (this.maxHeap[i] == null) {
+                    this.maxHeap[i] = value;
+                    return;
+                }
+                
+                if (value.compareTo(this.maxHeap[i]) == 1) {
+                    
+                    i = this.right(i);
+                    
+                }
+                else {
+                    
+                    i = this.left(i);
+                }
+                
+                System.out.println("Capacidade Insuficiente!!");
+            }
         }
         
-        return builder.toString();
+        @Override
+        public String toString () {
+            
+            StringBuilder builder = new StringBuilder();
+            
+            for (int i = 0; i < this.capacity; i++) {
+                
+                if (this.maxHeap[i] != null){
+                    builder.append("[");
+                    builder.append(this.maxHeap[i]);
+                    builder.append("] ");
+                }
+                
+            }
+            
+            return builder.toString();
+        }
+        
     }
-}
