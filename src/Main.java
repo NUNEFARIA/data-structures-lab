@@ -25,7 +25,7 @@ public class Main {
         
         System.out.println(maxHeap.peek());
         
-        maxHeap.remove(2);
+        maxHeap.remove();
         System.out.println(maxHeap);
     }
 }
