@@ -72,8 +72,24 @@ public class MaxHeap<T extends Comparable<T>> {
         return this.maxHeap[0];
     }
     
-//    remove()
-//    heapifyDown()
+    public T remove(int index) {
+        
+        if (this.size == 0) {
+            throw new RuntimeException("Heap is empty");
+        }
+        
+        T removedValue = this.maxHeap[0];
+        
+        this.maxHeap[0] = this.maxHeap[this.size - 1];
+        
+        this.maxHeap[this.size - 1] = null;
+        
+        this.size--;
+        
+        this.heapifyDown();
+        
+        return removedValue;
+    }
     
     @Override
     public String toString () {

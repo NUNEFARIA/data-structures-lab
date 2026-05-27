@@ -10,18 +10,22 @@ public class Main {
         
         System.out.println(maxHeap);
         
+        maxHeap.insert(1);
+        System.out.println(maxHeap);
+        maxHeap.insert(2);
+        System.out.println(maxHeap);
+        maxHeap.insert(3);
+        System.out.println(maxHeap);
+        maxHeap.insert(4);
+        System.out.println(maxHeap);
+        maxHeap.insert(5);
+        System.out.println(maxHeap);
         maxHeap.insert(10);
-        System.out.println(maxHeap);
-        maxHeap.insert(9);
-        System.out.println(maxHeap);
-        maxHeap.insert(8);
-        System.out.println(maxHeap);
-        maxHeap.insert(10);
-        System.out.println(maxHeap);
-        maxHeap.insert(11);
-        System.out.println(maxHeap);maxHeap.insert(10);
         System.out.println(maxHeap);
         
         System.out.println(maxHeap.peek());
+        
+        maxHeap.remove(2);
+        System.out.println(maxHeap);
     }
 }
