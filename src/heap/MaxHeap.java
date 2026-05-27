@@ -51,6 +51,11 @@ public class MaxHeap<T extends Comparable<T>> {
     
     }
     
+    private int leftSon(int index) {
+        
+        return (2 * index + 1);
+    }
+    
     private void heapifyDown() {
         
         int index = 0;
