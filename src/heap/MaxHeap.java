@@ -64,6 +64,10 @@ public class MaxHeap<T extends Comparable<T>> {
         this.size++;
     }
     
+//    peek()
+//    remove()
+//    heapifyDown()
+    
     @Override
     public String toString () {
             

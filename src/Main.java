@@ -14,7 +14,12 @@ public class Main {
         System.out.println(maxHeap);
         maxHeap.insert(9);
         System.out.println(maxHeap);
+        maxHeap.insert(8);
+        System.out.println(maxHeap);
         maxHeap.insert(10);
+        System.out.println(maxHeap);
+        maxHeap.insert(11);
+        System.out.println(maxHeap);maxHeap.insert(10);
         System.out.println(maxHeap);
     }
 }
