@@ -13,6 +13,26 @@ public class Graph<T> {
     
 //    connect()
 //    disconnect()
-//    toString()
+    
+    public String toString() {
+        
+        if (this.vertices.isEmpty()) {
+            
+            return "Graph is empty";
+            
+        }
+        
+        StringBuilder builder = new StringBuilder();
+        
+        for (Vertex v: this.vertices) {
+            
+            builder.append("\n");
+            builder.append(v);
+            
+        }
+        
+        
+        return builder.toString();
+    }
 
 }
