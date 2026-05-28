@@ -30,6 +30,27 @@ public class Vertex<T> {
     
 //    connect()
 //    disconnect()
-//    toString()
+    
+    public String toString() {
+        
+        StringBuilder builder = new StringBuilder();
+        
+        builder.append(this.value);
+        
+        if(!(this.connections.isEmpty())) {
+            
+            builder.append(" -> ");
+            
+            for (Vertex v : this.connections) {
+                
+                builder.append(v);
+                builder.append(" ");
+            }
+            
+        }
+        
+        return builder.toString();
+        
+    }
 
 }
