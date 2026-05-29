@@ -11,6 +11,13 @@ public class Graph<T> {
         this.vertices = new ArrayList<>();
     }
     
+    public  void addVertex(T value) {
+        
+        Vertex<T> newVertex = new Vertex<>(value);
+        
+        this.vertices.add(newVertex);
+        
+    }
 //    connect()
 //    disconnect()
     
