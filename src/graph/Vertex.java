@@ -28,9 +28,18 @@ public class Vertex<T> {
         this.connections = connections;
     }
     
-//    connect()
+    public void connect(Vertex<T> vertex) {
+        
+        this.connections.add(vertex);
+        
+    }
+    
 //    disconnect()
     
+    // When I was making this, noticed a difficult
+    // to represent graphs on terminal, know it's
+    // possible, but graphic interface isn't my object
+    // on this moment
     public String toString() {
         
         StringBuilder builder = new StringBuilder();
