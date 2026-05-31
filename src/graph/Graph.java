@@ -11,6 +11,10 @@ public class Graph<T> {
         this.vertices = new ArrayList<>();
     }
     
+    public ArrayList<Vertex<T>> getVertices() {
+        return vertices;
+    }
+    
     public  void addVertex(T value) {
         
         Vertex<T> newVertex = new Vertex<>(value);

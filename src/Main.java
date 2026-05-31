@@ -7,13 +7,15 @@ import tree.Node;
 public class Main {
     public static void main(String[] args) {
         
-        Graph<Integer> graph = new Graph<>();
+        Graph<Character> graph = new Graph<>();
         
-        graph.addVertex(2);
-        graph.addVertex(7);
-        graph.addVertex(6876);
-        graph.addVertex(0);
+        graph.addVertex('A');
+        graph.addVertex('B');
+        graph.addVertex('C');
+        graph.addVertex('D');
         
         System.out.println(graph);
+        
+        graph.connect(graph.);
     }
 }
