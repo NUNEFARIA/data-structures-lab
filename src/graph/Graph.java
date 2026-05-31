@@ -19,7 +19,23 @@ public class Graph<T> {
         
     }
     
-//    connect()
+    public void connect(Vertex<T> vertexA, Vertex<T> vertexB) {
+        
+        if(vertexA.getConnections().contains(vertexB)) {
+            
+            System.out.println("\n" +
+                    vertexA.getValue() +
+                    " e " +
+                    vertexB.getValue() +
+                    " já estão conectados");
+            
+            return;
+        }
+        
+        vertexA.connect(vertexB);
+        vertexB.connect(vertexA);
+        
+    }
 //    disconnect()
     
     public String toString() {

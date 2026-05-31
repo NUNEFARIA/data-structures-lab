@@ -12,7 +12,7 @@ public class Main {
         graph.addVertex(2);
         graph.addVertex(7);
         graph.addVertex(6876);
-        graph.addVertex(00);
+        graph.addVertex(0);
         
         System.out.println(graph);
     }
