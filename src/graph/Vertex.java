@@ -52,7 +52,7 @@ public class Vertex<T> {
             
             for (Vertex v : this.connections) {
                 
-                builder.append(v);
+                builder.append(v.getValue());
                 builder.append(" ");
             }
             
