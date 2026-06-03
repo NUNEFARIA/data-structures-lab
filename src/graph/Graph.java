@@ -46,7 +46,8 @@ public class Graph<T> {
         vertexB.connect(vertexA);
         
     }
-//    disconnect()
+    
+    public void disconnect()
     
     public String toString() {
         

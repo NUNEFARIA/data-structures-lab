@@ -34,7 +34,11 @@ public class Vertex<T> {
         
     }
     
-//    disconnect()
+    public void disconnect(Vertex<T> vertex) {
+        
+        this.connections.remove(vertex);
+        
+    }
     
     // When I was making this, noticed a difficult
     // to represent graphs on terminal, know it's
