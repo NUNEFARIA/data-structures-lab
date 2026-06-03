@@ -37,7 +37,7 @@ public class Graph<T> {
                     vertexA.getValue() +
                     " e " +
                     vertexB.getValue() +
-                    " They are aready connected");
+                    " They are already connected");
             
             return;
         }
@@ -61,7 +61,7 @@ public class Graph<T> {
                     vertexA.getValue() +
                     " e " +
                     vertexB.getValue() +
-                    " They aren't aready connected");
+                    " They aren't already connected");
             
             return;
         }
