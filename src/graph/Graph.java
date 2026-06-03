@@ -23,6 +23,27 @@ public class Graph<T> {
         
     }
     
+    public  void removeVertex(Vertex<T> vertex) {
+        
+        if (!vertices.contains(vertex)) {
+            
+            throw new IllegalArgumentException("Vertex does not belong to graph");
+        }
+        
+        this.vertices.remove(vertex);
+        
+        for (Vertex<T> v: this.vertices) {
+            
+            if( v.getConnections().contains(vertex)) {
+                
+                v.disconnect(vertex);
+                
+            }
+            
+        }
+        
+    }
+    
     public void connect(Vertex<T> vertexA, Vertex<T> vertexB) {
         
         if (!vertices.contains(vertexA) ||
