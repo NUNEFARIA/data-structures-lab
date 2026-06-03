@@ -1,31 +1,29 @@
+import graph.Graph;
 import hashMap.HashMap;
 import heap.MaxHeap;
 import tree.BinaryTree;
 import tree.Node;
 
 public class Main {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         
-        MaxHeap maxHeap = new MaxHeap<>(50);
+        Graph<Character> graph = new Graph<>();
         
-        System.out.println(maxHeap);
+        graph.addVertex('A');
+        graph.addVertex('B');
+        graph.addVertex('C');
+        graph.addVertex('D');
         
-        maxHeap.insert(1);
-        System.out.println(maxHeap);
-        maxHeap.insert(2);
-        System.out.println(maxHeap);
-        maxHeap.insert(3);
-        System.out.println(maxHeap);
-        maxHeap.insert(4);
-        System.out.println(maxHeap);
-        maxHeap.insert(5);
-        System.out.println(maxHeap);
-        maxHeap.insert(10);
-        System.out.println(maxHeap);
+        System.out.println(graph);
         
-        System.out.println(maxHeap.peek());
+        graph.connect(graph.getVertices().get(0), graph.getVertices().get(1));
         
-        maxHeap.remove();
-        System.out.println(maxHeap);
+        System.out.println();
+        System.out.println(graph);
+        
+        graph.removeVertex(graph.getVertices().get(1));
+        
+        System.out.println();
+        System.out.println(graph);
     }
 }
