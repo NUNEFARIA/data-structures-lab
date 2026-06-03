@@ -20,5 +20,10 @@ public class Main {
         
         System.out.println();
         System.out.println(graph);
+        
+        graph.disconnect(graph.getVertices().get(0), graph.getVertices().get(1));
+        
+        System.out.println();
+        System.out.println(graph);
     }
 }

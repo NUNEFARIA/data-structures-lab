@@ -47,7 +47,29 @@ public class Graph<T> {
         
     }
     
-    public void disconnect()
+    public void disconnect(Vertex<T> vertexA, Vertex<T> vertexB) {
+        
+        if (!vertices.contains(vertexA) ||
+                !vertices.contains(vertexB)) {
+            
+            throw new IllegalArgumentException("Vertex does not belong to graph");
+        }
+        
+        if(!(vertexA.getConnections().contains(vertexB))) {
+            
+            System.out.println("\n" +
+                    vertexA.getValue() +
+                    " e " +
+                    vertexB.getValue() +
+                    " They aren't aready connected");
+            
+            return;
+        }
+        
+        vertexA.disconnect(vertexB);
+        vertexB.disconnect(vertexA);
+        
+    }
     
     public String toString() {
         
