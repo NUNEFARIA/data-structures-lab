@@ -25,13 +25,19 @@ public class Graph<T> {
     
     public void connect(Vertex<T> vertexA, Vertex<T> vertexB) {
         
+        if (!vertices.contains(vertexA) ||
+                !vertices.contains(vertexB)) {
+            
+            throw new IllegalArgumentException("Vertex does not belong to graph");
+        }
+        
         if(vertexA.getConnections().contains(vertexB)) {
             
             System.out.println("\n" +
                     vertexA.getValue() +
                     " e " +
                     vertexB.getValue() +
-                    " já estão conectados");
+                    " They are aready connected");
             
             return;
         }
