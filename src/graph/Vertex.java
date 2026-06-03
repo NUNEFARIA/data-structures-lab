@@ -50,7 +50,7 @@ public class Vertex<T> {
             
             builder.append(" -> ");
             
-            for (Vertex v : this.connections) {
+            for (Vertex<T> v : this.connections) {
                 
                 builder.append(v.getValue());
                 builder.append(" ");

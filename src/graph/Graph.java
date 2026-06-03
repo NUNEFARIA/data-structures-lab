@@ -52,7 +52,7 @@ public class Graph<T> {
         
         StringBuilder builder = new StringBuilder();
         
-        for (Vertex v: this.vertices) {
+        for (Vertex<T> v: this.vertices) {
             
             builder.append("\n");
             builder.append(v);
