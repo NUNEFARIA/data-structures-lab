@@ -1,53 +1,53 @@
-# Estruturas de Dados
+# Data Structures
 *By NUNES*
 
 ---
 
-## Introdução
+## Introduction
 
-> Muitas estruturas são abstrações sobre outras.
+> Many structures are abstractions over others.
 
-**O que são estruturas de dados?**
-É uma forma pela qual os dados são organizados de modo que possam ser acessados e/ou manipulados de forma eficiente.
+**What are data structures?**
+It is a way in which data is organized so that it can be accessed and/or manipulated efficiently.
 
 ---
 
 ## Array
 
-Coleção com quantidade **fixa** de elementos onde a ordem importa.
+Collection with a **fixed** number of elements where order matters.
 
 ```
-Índice:  [0]  [1]  [2]  [3]  [4]  [5]
-Valor:   [42] [17] [99] [ 5] [88] [ 3]
+Index:  [0]  [1]  [2]  [3]  [4]  [5]
+Value:  [42] [17] [99] [ 5] [88] [ 3]
                 ↑
-          acesso direto por índice
+          direct access by index
 ```
 
-- Acesso rápido por índice
-- Inserção/remoção no meio → move elementos
+- Fast access by index
+- Insertion/removal in the middle → shifts elements
 
 ---
 
 ## Linked List
 
-Cada elemento (node) aponta para o próximo. Sem memória contígua.
+Each element (node) points to the next. No contiguous memory.
 
 ```
-[dado|•]──→[dado|•]──→[dado|•]──→[dado|null]
+[data|•]──→[data|•]──→[data|•]──→[data|null]
   node 0      node 1      node 2      node 3
 ```
 
-- Inserção/remoção → move ponteiros
-- Acesso por índice → percorre a lista
+- Insertion/removal → moves pointers
+- Access by index → traverses the list
 
 ---
 
 ## Stack
 
-Coleção onde o **último a entrar é o primeiro a sair** — LIFO (*Last In, First Out*).
+Collection where the **last in is the first out** — LIFO (*Last In, First Out*).
 
 ```
-     topo
+     top
   ┌────────┐
   │   C    │ ← push / pop
   ├────────┤
@@ -57,30 +57,30 @@ Coleção onde o **último a entrar é o primeiro a sair** — LIFO (*Last In, F
   └────────┘
 ```
 
-- `push` → insere no topo
-- `pop`  → remove do topo
-- Acesso apenas ao topo
+- `push` → inserts at the top
+- `pop`  → removes from the top
+- Access only at the top
 
 ---
 
 ## Queue
 
-Coleção onde o **primeiro a entrar é o primeiro a sair** — FIFO (*First In, First Out*).
+Collection where the **first in is the first out** — FIFO (*First In, First Out*).
 
 ```
 enqueue →  [ A | B | C | D ]  → dequeue
-           entrada           saída
+           entrance           exit
 ```
 
-- `enqueue` → insere no fim
-- `dequeue` → remove do início
-- Entrada e saída em lados opostos
+- `enqueue` → inserts at the end
+- `dequeue` → removes from the front
+- Input and output on opposite ends
 
 ---
 
 ## Tree
 
-Estrutura hierárquica de nós.
+Hierarchical structure of nodes.
 
 ```
           [root]
@@ -90,34 +90,34 @@ Estrutura hierárquica de nós.
   [left] [right]
 ```
 
-- Cada nó pode ter filhos (esquerdo e direito em árvores binárias)
-- Raiz (*root*) é o único nó sem pai
+- Each node can have children (left and right in binary trees)
+- Root is the only node without a parent
 
 ---
 
 ## HashMap
 
-Armazena pares **chave → valor**. A chave é transformada por uma *hash function* em um índice que aponta para um *bucket* do array interno.
+Stores **key → value** pairs. The key is transformed by a *hash function* into an index that points to a *bucket* in the internal array.
 
 ```
- key        hash fn      bucket (array interno)
-"nome"  ──→  h("nome") ──→  índice 3  ──→  ["nome": "Ana"]
-"idade" ──→  h("idade") ──→ índice 7  ──→  ["idade": 25]
-"city"  ──→  h("city")  ──→ índice 3  ──→  colisão! → encadeamento
+ key        hash fn      bucket (internal array)
+"name"  ──→  h("name") ──→  index 3  ──→  ["name": "Ana"]
+"age"   ──→  h("age")  ──→  index 7  ──→  ["age": 25]
+"city"  ──→  h("city") ──→  index 3  ──→  collision! → chaining
 ```
 
 **Hash function:**
-- Transforma a key em um índice
-- Distribui os dados da forma mais uniforme possível
-- Determinística: mesma key → mesmo hash
+- Transforms the key into an index
+- Distributes data as uniformly as possible
+- Deterministic: same key → same hash
 
-**Colisão:** quando duas keys geram o mesmo índice (*bucket*). Resolvida via encadeamento ou endereçamento aberto.
+**Collision:** when two keys generate the same index (*bucket*). Resolved via chaining or open addressing.
 
 ---
 
 ## Heap
 
-Árvore binária **completa** e **parcialmente ordenada**, geralmente implementada com array.
+**Complete** and **partially ordered** binary tree, usually implemented with an array.
 
 ```
          MaxHeap              MinHeap
@@ -127,17 +127,17 @@ Armazena pares **chave → valor**. A chave é transformada por uma *hash functi
         /  \                /  \
       [30] [40]           [6]  [5]
 
-  pai >= filhos          pai <= filhos
+  parent >= children     parent <= children
 ```
 
-- Parcialmente ordenada (não é totalmente ordenada como BST)
-- Funciona como uma *priority queue*
+- Partially ordered (not fully ordered like a BST)
+- Works as a *priority queue*
 
 ---
 
-## Grafo
+## Graph
 
-Estrutura de **conexões livres** entre nós (vértices), ligados por arestas.
+Structure of **free connections** between nodes (vertices), linked by edges.
 
 ```
     (A)──────(B)
@@ -147,7 +147,7 @@ Estrutura de **conexões livres** entre nós (vértices), ligados por arestas.
     (C)──────(D)
 ```
 
-- Vértices (*nodes*) + Arestas (*edges*)
-- Pode ser dirigido (setas) ou não dirigido
-- Pode ter pesos nas arestas
-- Não há hierarquia obrigatória (diferente da Tree)
+- Vertices (*nodes*) + Edges
+- Can be directed (arrows) or undirected
+- Edges can have weights
+- No mandatory hierarchy (unlike a Tree)
